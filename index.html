@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Ping Pong 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen">
+  <h1>Ping Pong <span>3D</span></h1>
+  <p>
+    Gerakkan paddle dengan <span class="key">&larr;</span><span class="key">&rarr;</span> atau
+    <span class="key">A</span><span class="key">D</span> untuk kiri-kanan, dan
+    <span class="key">&uarr;</span><span class="key">&darr;</span> atau
+    <span class="key">W</span><span class="key">S</span> untuk maju-mundur.
+    Pantulkan bola ke sisi lawan &mdash; makin lama rally, bola makin <b style="color:#ffb347">ngebut</b>!
+    Pertandingan sampai 7 poin.
+  </p>
+  <button id="startBtn">MULAI MAIN</button>
+</div>
+
+<div id="hud">
+  <div class="score-box" id="you">
+    <div class="score-label">Kamu</div>
+    <div class="score-value" id="youScore">0</div>
+  </div>
+  <div class="vs">VS</div>
+  <div class="score-box" id="ai">
+    <div class="score-label">CPU</div>
+    <div class="score-value" id="aiScore">0</div>
+  </div>
+</div>
+
+<div id="rallyBox">
+  <div class="lbl">Rally</div>
+  <div class="val" id="rallyVal">0</div>
+  <div id="speedBarWrap"><div id="speedBar"></div></div>
+</div>
+
+<div id="banner"></div>
+
+<div id="info"><b>&larr;&rarr; / A D</b> geser kiri-kanan &nbsp;&nbsp; <b>&uarr;&darr; / W S</b> maju-mundur</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

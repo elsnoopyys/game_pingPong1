@@ -1,0 +1,145 @@
+
+Style · CSS
+* { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    overflow: hidden;
+    background: #0a0e14;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  canvas { display: block; }
+ 
+  #hud {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .score-box {
+    text-align: center;
+    color: #fff;
+  }
+  .score-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .score-value {
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+  #you .score-value { color: #ff5468; text-shadow: 0 0 20px rgba(255,84,104,0.5); }
+  #ai .score-value { color: #4fa8ff; text-shadow: 0 0 20px rgba(79,168,255,0.5); }
+  .vs { color: #555; font-size: 24px; font-weight: 300; }
+ 
+  #info {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8a94a6;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+    line-height: 1.6;
+  }
+  #info b { color: #dfe4ea; }
+ 
+  #rallyBox {
+    position: fixed;
+    top: 26px;
+    right: 30px;
+    text-align: right;
+    color: #fff;
+    pointer-events: none;
+    z-index: 10;
+    font-variant-numeric: tabular-nums;
+  }
+  #rallyBox .lbl { font-size: 11px; letter-spacing: 2px; color: #6c7688; text-transform: uppercase; }
+  #rallyBox .val { font-size: 22px; font-weight: 700; color: #ffd166; text-shadow: 0 0 14px rgba(255,209,102,0.5); }
+  #speedBarWrap {
+    margin-top: 8px;
+    width: 120px;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  #speedBar {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(90deg, #4fa8ff, #ff5468);
+    transition: width 0.15s ease;
+  }
+ 
+  #banner {
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    color: #fff;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    text-shadow: 0 0 30px rgba(0,0,0,0.6);
+  }
+  #banner.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+ 
+  #startScreen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #101826 0%, #05070b 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    color: #fff;
+    text-align: center;
+    gap: 18px;
+  }
+  #startScreen h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  #startScreen h1 span { color: #ff5468; }
+  #startScreen p { color: #8a94a6; max-width: 420px; line-height: 1.7; font-size: 14px; }
+  #startBtn {
+    margin-top: 10px;
+    padding: 14px 38px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #05070b;
+    background: linear-gradient(135deg, #ff5468, #ff8a5b);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(255,84,104,0.35);
+    transition: transform 0.15s ease;
+  }
+  #startBtn:hover { transform: translateY(-2px) scale(1.03); }
+  .key {
+    display: inline-block;
+    background: #1c2433;
+    border: 1px solid #333f54;
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin: 0 2px;
+    font-family: monospace;
+  }
+ 
+
